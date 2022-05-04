@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+    --almost-White: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue";
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--almost-White);
+}
+
+p {
+    font-size: 18px;
+    color: var(--medium-gray);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-fluid {
+    padding: 3rem;
+    padding-bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 6rem 10rem;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center stretch;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+h1 {
+    font-size: 74px;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-li, .nav-link {
+    color: var(--medium-gray);
+}
+
+.black-btn {
+    padding: 0.7rem 1rem;
+    color: white;
+    background-color: black;
+    width: fit-content;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.black-btn:hover {
+    background-color: transparent;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.drop-down {
+    cursor: pointer;
+    display: flex;
+}
+
+.drop-down::after {
+    content: "";
+    margin-left: 5px;
+    display: block;
+    width: 8px;
+    height: auto;
+    background: url("./images/icon-arrow-down.svg") center no-repeat;
+    background-size: 100%;
+    transition: transform 0.5s;
+}
+
+.dp-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: baseline;
+    gap: 1rem;
+    margin-top: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dp-menu a img {
+    margin-right: 5px;
+    width: 10px;
+}
+
+.toggled {
+    color: black;
+}
+
+.toggled .dp-menu {
+    display: flex;
+}
+
+.toggled::after {
+    transform: rotate(180deg);
+}
+
+.register-btn {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: darkcyan;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.register-btn:hover {
+    color: black;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    padding-top: 5rem;
+    gap: 1rem;
+}
+
+.clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.right-box {
+    background: url("./images/image-hero-desktop.png") center no-repeat;
+    background-size: contain;
+    margin-left: 6rem;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+menu {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 2rem;
+    display: flex;
+    width: 50%;
+    padding-top: 6rem;
+    padding-left: 2rem;
+    visibility: hidden;
+}
+
+menu::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(50% - 2rem);
+    background-color: rgba(0, 0, 0, .7);
+}
+
+menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+menu .drop-down {
+    display: block;
+}
+
+menu div, menu a {
+    font-size: 18px;
+    color: var(--medium-gray);
+    width: fit-content;
+}
+
+menu .menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+menu .rg-btn {
+    border: 2px solid darkcyan;
+    padding: .7rem 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+menu .toggled .menu {
+    display: flex !important;
+}
+
+menu .drop-down .menu {
+    display: none;
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+menu .toggled .toggle {
+    transform: rotate(180deg) !important;
+}
+
+menu .drop-down .toggle {
+    display: inline-flex;
+    margin-left: 5px;
+    transition: transform .4s;
+}
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .container-fluid {
+        padding: 1rem 1.5rem;
+    }
+
+    .container {
+        padding: 0;
+        padding-bottom: 6rem;
+    }
+
+    .nav-ul {
+        display: none;
+    }
+
+    .row {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    .navbar-toggle {
+        cursor: pointer;
+        display: block;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .left-box {
+        min-height: 300px;
+    }
+
+    .left-box p {
+        padding: 0 4rem;
+        text-align: center;
+    }
+
+    .black-btn {
+        display: table;
+        margin: 0 auto;
+    }
+
+    .right-box {
+        min-height: 400px;
+        margin: 0;
+        background: url("./images/image-hero-mobile.png") center no-repeat;
+        background-size: 100%;
+        padding: 2rem 0;
+    }
+
+    .clients {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navbar-toggle, menu {
+        display: none !important;
+    }
+}
